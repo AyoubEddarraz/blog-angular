@@ -1,0 +1,34 @@
+<div class="posts">
+  <div class="big-container">
+      <ng-container *ngFor="let post of posts">
+        <div class="topblog row my-4 bg-light p-3 rounded shadow-sm" [routerLink]="['/post', post.id]">
+          <!-- image post -->
+          <div class="imageBlog col-lg-6">
+            <img class="shadow-sm rounded" [src]="post.imgArticle" alt="image of blog">
+          </div>
+          <!-- blog short info -->
+          <div class="blogInfo col-lg-6 p-3">
+            <div class="chips rounded">blog</div>
+            <div class="title pt-2">
+              <h2> {{ post.title }} </h2>
+            </div>
+            <div class="paragraph">
+              <p>
+                {{ post.article | shortArticle:50 }}
+              </p>
+              <button mat-icon-button>
+                <mat-icon [routerLink]="['/post', post.id]">trending_flat</mat-icon>
+              </button>
+            </div>
+            <mat-card class="cardAuthor">
+              <mat-card-header>
+                <div mat-card-avatar class="header_image"></div>
+                <mat-card-title> {{ post.author }} </mat-card-title>
+                <mat-card-subtitle>Author</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+          </div>
+        </div>
+      </ng-container>
+  </div>
+</div>

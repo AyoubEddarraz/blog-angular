@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenavContainer">
+
+  <mat-sidenav #sidenav mode="push" opened="false" class="sidenav" *ngIf="isAdmin">
+    <img src="assets/peaqock2.png" alt="peaqock">
+    <hr class="m-3">
+    <app-nav-list-admin></app-nav-list-admin>
+    <p class="createdwithlove">Created with ❤️ & ☕ by Peaqock </p>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenavContent">
+
+    <!-- Toolbar -->
+    <mat-toolbar class="bg-light shadow-sm toolbar">
+      <button mat-icon-button (click)="openSideNav()" *ngIf="isAdmin">
+        <mat-icon class="icone">menu</mat-icon>
+      </button>
+      <h5 class="title" routerLink="/posts">peaqock<strong>blog</strong></h5>
+      <div class="account">
+        <button mat-button class="mx-2" routerLink="/login" [hidden]="loggedIn">Login</button>
+        <button mat-raised-button color="warn" routerLink="/singUp" class="main" [hidden]="loggedIn">Sing Up</button>
+        <button mat-icon-button [matMenuTriggerFor]="userMenu" [hidden]="!loggedIn"> <mat-icon> person_outline </mat-icon> </button>
+        <mat-menu #userMenu class="p-3" [hidden]="!loggedIn">
+          <mat-slide-toggle color="primary" class="main">dark mode</mat-slide-toggle>
+          <hr>
+          <button mat-button class="block my-2" color="accent" (click)="logOut()">LogOut</button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+
+    <!-- just for the admin add new posts icon -->
+    <button mat-icon-button class="addNewPost main" *ngIf="isAdmin" routerLink="/postAdmin/add"> <mat-icon>add</mat-icon> </button>
+
+    <!-- Router Outlet -->
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

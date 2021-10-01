@@ -1,0 +1,22 @@
+<div class="post my-4">
+  <div class="small-container">
+
+    <button class="previous" mat-icon-button routerLink="/posts"><mat-icon>undo</mat-icon></button> <br>
+
+    <img class="shadow-sm rounded mb-5" [src]="post.imgArticle" alt="image of blog">
+
+    <h1 class="title"> {{ post.title | uppercase }} </h1>
+
+    <p class="paragraph"> {{ post.article }} </p>
+
+    <mat-card class="cardAuthor my-5">
+      <mat-card-header>
+        <div mat-card-avatar class="header_image"></div>
+        <mat-card-title> {{ post.author }} </mat-card-title>
+        <mat-card-subtitle>Author</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+
+  </div>
+</div>
+

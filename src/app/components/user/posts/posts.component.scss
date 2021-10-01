@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+.topblog{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+
+  .imageBlog{
+    img{
+      width: 100%;
+    }
+  }
+
+  .blogInfo{
+
+    .chips{
+      width: max-content;
+      padding: .3rem 1rem;
+      background-color:#1abc9c23;
+      color: #1abc9c;
+    }
+
+    .title{
+      text-transform: capitalize;
+      font-weight: bold !important;
+      font-family: 'Oswald', sans-serif !important;
+    }
+
+    .cardAuthor{
+      background: none !important;
+      box-shadow: none !important;
+    }
+
+    .header_image {
+      background-image: url('https://scontent.fcmn2-2.fna.fbcdn.net/v/t1.6435-9/158449912_773497706932234_7359957039235668686_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEMQdJTkeK18nOlY9zvSFTMVQBaZIGQ_kdVAFpkgZD-R2Pbuugbz7K2dmXSwZEcMNjVFeZTe4yTzxcZOdm6kbU_&_nc_ohc=2lFNuX6nkUYAX-DgaBb&_nc_ht=scontent.fcmn2-2.fna&oh=f90afe4071dd12183199f343218d2ecc&oe=61790675');
+      background-size: cover;
+    }
+
+  }
+
+}
+

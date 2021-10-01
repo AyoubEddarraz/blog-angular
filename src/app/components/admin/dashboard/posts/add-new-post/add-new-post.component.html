@@ -1,0 +1,27 @@
+<div class="newPost form-container bg-light p-5 my-5 rounded shadow-sm">
+
+  <form [formGroup]="newPostForm">
+
+    <mat-form-field appearance="outline" class="d-block my-2">
+      <mat-label>Title</mat-label>
+      <input type="text" matInput placeholder="Enter title of post" required formControlName="title">
+      <mat-error>Title is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="d-block my-2">
+      <mat-label>article</mat-label>
+      <textarea type="text" matInput placeholder="Enter your article here" required formControlName="article"></textarea>
+      <mat-error>article is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="d-block my-2">
+      <mat-label>image source</mat-label>
+      <input type="text" matInput placeholder="Enter your source link here" required formControlName="imgArticle">
+      <mat-error>image source is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button class="main form block my-3" [disabled]="newPostForm.invalid" (click)="addNewPost()">add</button>
+
+  </form>
+
+</div>

@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('~bootstrap/dist/css/bootstrap.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+  background-color: #ecf0f1 !important;
+  font-family: 'Open Sans Condensed', sans-serif !important;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.icon{
+  cursor: pointer;
+}
+
+button{
+
+  &.main{
+    background-color: #4352FF !important;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  &.main.form{
+    height: 55px !important;
+  }
+
+  &.mat-button-disabled{
+    background-color: #4b4b4b73 !important;
+    cursor: no-drop;
+  }
+
+}
+
+button.block{
+    width: 100% !important;
+}
+
+textarea{
+  min-height: 150px !important;
+}
+
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb{
+  background-color: #4352FF;
+}
+
+.small-container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.big-container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sectionTitle{
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+.form-container{
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.active{
+  background-color: #4352FF !important;
+  color: white !important;
+  opacity: 1 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .form-container{
+    width: 90%;
+  }
+}

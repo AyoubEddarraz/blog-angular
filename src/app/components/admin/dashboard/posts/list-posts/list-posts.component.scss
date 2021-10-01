@@ -1,0 +1,17 @@
+.listPosts{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+  .card{
+    max-width: 350px;
+
+    .card-avatar{
+      background-image: url('https://scontent.fcmn2-2.fna.fbcdn.net/v/t1.6435-9/158449912_773497706932234_7359957039235668686_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEMQdJTkeK18nOlY9zvSFTMVQBaZIGQ_kdVAFpkgZD-R2Pbuugbz7K2dmXSwZEcMNjVFeZTe4yTzxcZOdm6kbU_&_nc_ohc=2lFNuX6nkUYAX-DgaBb&_nc_ht=scontent.fcmn2-2.fna&oh=f90afe4071dd12183199f343218d2ecc&oe=61790675');
+      background-size: cover;
+    }
+
+  }
+
+}

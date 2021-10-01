@@ -1,0 +1,27 @@
+<div class="login form-container bg-light p-5 my-5 rounded shadow-sm">
+
+  .<div class="alert alert-danger" role="alert" *ngIf="emailOrPasswordIncorrect">
+    <strong>Email Or Password Incorrect</strong>
+  </div>
+
+  <form [formGroup]="loginForm">
+
+    <mat-form-field appearance="outline" class="d-block my-2">
+      <mat-label>email</mat-label>
+      <input type="email" matInput placeholder="Enter your email" required formControlName="email">
+      <mat-error>email is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="d-block my-2">
+      <mat-label>password</mat-label>
+      <input type="password" matInput placeholder="Enter your password" required formControlName="password">
+      <mat-error>password is <strong>required</strong></mat-error>
+    </mat-form-field>
+
+    <a routerLink="/singUp">I dont have account</a>
+
+    <button mat-raised-button class="main form block my-3" [disabled]="loginForm.invalid" (click)="login()">Login</button>
+
+  </form>
+
+</div>
